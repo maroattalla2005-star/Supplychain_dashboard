@@ -10,9 +10,10 @@ table supply_chain_data
 		annotation SummarizationSetBy = Automatic
 
 	column SKU
-		dataType: string
+		dataType: int64
+		formatString: 0
 		lineageTag: d96ceb2c-f78b-4a28-a6da-bf7386ef79d9
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: SKU
 
 		annotation SummarizationSetBy = Automatic
@@ -216,6 +217,15 @@ table supply_chain_data
 
 		annotation SummarizationSetBy = Automatic
 
+	column profit
+		dataType: int64
+		formatString: 0
+		lineageTag: ff1976c7-b856-4e8c-9086-53136e024648
+		summarizeBy: sum
+		sourceColumn: profit
+
+		annotation SummarizationSetBy = Automatic
+
 	partition supply_chain_data = m
 		mode: import
 		source =
@@ -225,9 +235,13 @@ table supply_chain_data
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Price", Int64.Type}, {"Revenue generated", Int64.Type}, {"Shipping costs", Int64.Type}, {"Manufacturing costs", Int64.Type}, {"Costs", Int64.Type}}),
 				    #"Added Conditional Column" = Table.AddColumn(#"Changed Type", "Male Count", each if [Customer demographics] = "Male" then 1 else 0),
 				    #"Added Conditional Column1" = Table.AddColumn(#"Added Conditional Column", "Female Count", each if [Customer demographics] = "Female" then 1 else 0),
-				    #"Changed Type1" = Table.TransformColumnTypes(#"Added Conditional Column1",{{"Female Count", Int64.Type}, {"Male Count", Int64.Type}})
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Added Conditional Column1",{{"Female Count", Int64.Type}, {"Male Count", Int64.Type}}),
+				    #"Extracted Last Characters" = Table.TransformColumns(#"Changed Type1", {{"SKU", each Text.End(_, 1), type text}}),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Extracted Last Characters",{{"SKU", Int64.Type}}),
+				    #"Added Custom" = Table.AddColumn(#"Changed Type2", "profit", each [Revenue generated] - [Costs]),
+				    #"Changed Type3" = Table.TransformColumnTypes(#"Added Custom",{{"profit", Int64.Type}})
 				in
-				    #"Changed Type1"
+				    #"Changed Type3"
 
 	annotation PBI_NavigationStepName = Navigation
 
