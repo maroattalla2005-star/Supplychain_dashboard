@@ -1,0 +1,235 @@
+table supply_chain_data
+	lineageTag: 960e840b-91e3-4181-af51-5184c2494e8a
+
+	column 'Product type'
+		dataType: string
+		lineageTag: 4653948f-5d16-4680-9ec1-095ee55df332
+		summarizeBy: none
+		sourceColumn: Product type
+
+		annotation SummarizationSetBy = Automatic
+
+	column SKU
+		dataType: string
+		lineageTag: d96ceb2c-f78b-4a28-a6da-bf7386ef79d9
+		summarizeBy: none
+		sourceColumn: SKU
+
+		annotation SummarizationSetBy = Automatic
+
+	column Price
+		dataType: int64
+		formatString: 0
+		lineageTag: 384b0f9d-5f42-492b-90ef-f49cbe183e74
+		summarizeBy: sum
+		sourceColumn: Price
+
+		annotation SummarizationSetBy = Automatic
+
+	column Availability
+		dataType: string
+		lineageTag: 594d535f-6ad1-4d82-8816-73939532cc42
+		summarizeBy: none
+		sourceColumn: Availability
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Number of products sold'
+		dataType: string
+		lineageTag: 9018d8c1-99f3-41fb-bb01-be785d8f8976
+		summarizeBy: none
+		sourceColumn: Number of products sold
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Revenue generated'
+		dataType: int64
+		formatString: 0
+		lineageTag: e27b5786-83c7-411b-830f-d54589573b05
+		summarizeBy: sum
+		sourceColumn: Revenue generated
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Customer demographics'
+		dataType: string
+		lineageTag: 94057dad-eabc-44cb-81cc-560502c90948
+		summarizeBy: none
+		sourceColumn: Customer demographics
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Stock levels'
+		dataType: string
+		lineageTag: 57e70290-6bf8-459e-9205-76f6e1aac12d
+		summarizeBy: none
+		sourceColumn: Stock levels
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lead times'
+		dataType: string
+		lineageTag: c5a3ebc5-fe7d-4cae-8b2c-ddd3402d7350
+		summarizeBy: none
+		sourceColumn: Lead times
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Order quantities'
+		dataType: string
+		lineageTag: 91f89c11-b84c-441b-9f89-a946cb3ff4a6
+		summarizeBy: none
+		sourceColumn: Order quantities
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Shipping times'
+		dataType: string
+		lineageTag: f7221153-6657-4aa5-a5e9-e1cad4b2ab5a
+		summarizeBy: none
+		sourceColumn: Shipping times
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Shipping carriers'
+		dataType: string
+		lineageTag: 54d1f195-c811-4ef7-befd-d4b3a4680a8e
+		summarizeBy: none
+		sourceColumn: Shipping carriers
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Shipping costs'
+		dataType: int64
+		formatString: 0
+		lineageTag: 50fed1ca-99e3-480a-bdcd-76940c1addf8
+		summarizeBy: sum
+		sourceColumn: Shipping costs
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Supplier name'
+		dataType: string
+		lineageTag: 7f5b0b15-b7b9-4050-a157-5a2878f92c77
+		summarizeBy: none
+		sourceColumn: Supplier name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Location
+		dataType: string
+		lineageTag: 0a7b990d-0133-473a-9201-ee9d7eeafa10
+		summarizeBy: none
+		sourceColumn: Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lead time'
+		dataType: string
+		lineageTag: de02c0f8-2f68-4e22-9bd5-ff135f043785
+		summarizeBy: none
+		sourceColumn: Lead time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Production volumes'
+		dataType: string
+		lineageTag: 45933abe-b4b4-40ff-9616-d23960eeeeef
+		summarizeBy: none
+		sourceColumn: Production volumes
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Manufacturing lead time'
+		dataType: string
+		lineageTag: 751d7797-64fd-43d3-8f82-3c8367450d0a
+		summarizeBy: none
+		sourceColumn: Manufacturing lead time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Manufacturing costs'
+		dataType: int64
+		formatString: 0
+		lineageTag: c56587f0-e3ac-40e5-9cbc-3d793b37538c
+		summarizeBy: sum
+		sourceColumn: Manufacturing costs
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Inspection results'
+		dataType: string
+		lineageTag: a96b3777-3589-4e20-82e0-3706efe047bc
+		summarizeBy: none
+		sourceColumn: Inspection results
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Defect rates'
+		dataType: string
+		lineageTag: 2756ee1c-b8c9-40c3-94a1-2c90c3d4dccd
+		summarizeBy: none
+		sourceColumn: Defect rates
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Transportation modes'
+		dataType: string
+		lineageTag: 744434c9-4d96-4665-9c0a-b660ccaffc14
+		summarizeBy: none
+		sourceColumn: Transportation modes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Routes
+		dataType: string
+		lineageTag: e94ada73-cdd2-4c31-91c2-92bda845fb07
+		summarizeBy: none
+		sourceColumn: Routes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Costs
+		dataType: int64
+		formatString: 0
+		lineageTag: e594ae43-0347-4c0d-8caf-70e3f373a267
+		summarizeBy: sum
+		sourceColumn: Costs
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Female Count'
+		dataType: int64
+		formatString: 0
+		lineageTag: 6eb65dd9-cf4f-4b51-9093-08b1a37ba2ac
+		summarizeBy: sum
+		sourceColumn: Female Count
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Male Count'
+		dataType: int64
+		formatString: 0
+		lineageTag: c5e94033-6d0b-455f-9631-ae572d3e383c
+		summarizeBy: sum
+		sourceColumn: Male Count
+
+		annotation SummarizationSetBy = Automatic
+
+	partition supply_chain_data = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\Marwan\Desktop\supply_chain_data.csv"),[Delimiter=",", Columns=24, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Price", Int64.Type}, {"Revenue generated", Int64.Type}, {"Shipping costs", Int64.Type}, {"Manufacturing costs", Int64.Type}, {"Costs", Int64.Type}}),
+				    #"Added Conditional Column" = Table.AddColumn(#"Changed Type", "Male Count", each if [Customer demographics] = "Male" then 1 else 0),
+				    #"Added Conditional Column1" = Table.AddColumn(#"Added Conditional Column", "Female Count", each if [Customer demographics] = "Female" then 1 else 0),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Added Conditional Column1",{{"Female Count", Int64.Type}, {"Male Count", Int64.Type}})
+				in
+				    #"Changed Type1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
